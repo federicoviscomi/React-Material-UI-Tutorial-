@@ -4,7 +4,7 @@ import { useState } from "react";
 export const MuiTextField = () => {
   const [value, setValue] = useState<string>("");
   return (
-    <Stack spacing={4}>
+    (<Stack spacing={4}>
       <Stack direction="row" spacing={2}>
         <TextField label="Filled text field" variant="filled"></TextField>
         <TextField label="Outlined text field" variant="outlined"></TextField>
@@ -40,17 +40,21 @@ export const MuiTextField = () => {
       <Stack direction="row" spacing={2}>
         <TextField
           label="Amount"
-          InputProps={{
-            startAdornment: <InputAdornment position="end">$</InputAdornment>,
+          slotProps={{
+            input: {
+              startAdornment: <InputAdornment position="end">$</InputAdornment>,
+            }
           }}
         ></TextField>
         <TextField
           label="Weight"
-          InputProps={{
-            startAdornment: <InputAdornment position="end">kg</InputAdornment>,
+          slotProps={{
+            input: {
+              startAdornment: <InputAdornment position="end">kg</InputAdornment>,
+            }
           }}
         ></TextField>
       </Stack>
-    </Stack>
+    </Stack>)
   );
 };

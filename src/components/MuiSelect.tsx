@@ -8,7 +8,9 @@ export const MuiSelect = () => {
     setCountries(typeof value === "string" ? value.split(",") : value);
   };
   return (
-    <Box width="250px">
+    (<Box sx={{
+      width: "250px"
+    }}>
       <TextField
         label="Select country"
         select
@@ -24,6 +26,6 @@ export const MuiSelect = () => {
         <MenuItem value="US">USA</MenuItem>
         <MenuItem value="AU">Australia</MenuItem>
       </TextField>
-    </Box>
+    </Box>)
   );
 };

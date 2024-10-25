@@ -23,7 +23,7 @@ export const MuiButton = () => {
   };
 
   return (
-    <Stack spacing={4}>
+    (<Stack spacing={4}>
       <Stack spacing={2} direction="row">
         <Button variant="text" href="https://google.com/">
           Text
@@ -31,7 +31,6 @@ export const MuiButton = () => {
         <Button variant="contained">Contained</Button>
         <Button variant="outlined">Outlined</Button>
       </Stack>
-
       <Stack spacing={2} direction="row">
         <Button variant="text" color="primary">
           Primary
@@ -52,7 +51,6 @@ export const MuiButton = () => {
           Success
         </Button>
       </Stack>
-
       <Stack spacing={2} direction="row">
         <Button variant="contained" color="primary">
           Primary
@@ -73,7 +71,6 @@ export const MuiButton = () => {
           Success
         </Button>
       </Stack>
-
       <Stack spacing={2} direction="row">
         <Button variant="outlined" color="primary">
           Primary
@@ -94,8 +91,9 @@ export const MuiButton = () => {
           Success
         </Button>
       </Stack>
-
-      <Stack display="block" spacing={2} direction="row">
+      <Stack spacing={2} direction="row" sx={{
+        display: "block"
+      }}>
         <Button variant="contained" size="small">
           Small
         </Button>
@@ -106,7 +104,6 @@ export const MuiButton = () => {
           Large
         </Button>
       </Stack>
-
       <Stack spacing={2} direction="row">
         <Button
           variant="contained"
@@ -127,7 +124,6 @@ export const MuiButton = () => {
           <SendIcon />
         </IconButton>
       </Stack>
-
       <Stack direction="row">
         <ButtonGroup variant="contained">
           <Button>Left</Button>
@@ -135,7 +131,6 @@ export const MuiButton = () => {
           <Button>Right</Button>
         </ButtonGroup>
       </Stack>
-
       <Stack direction="row">
         <ButtonGroup variant="outlined">
           <Button>Left</Button>
@@ -143,7 +138,6 @@ export const MuiButton = () => {
           <Button>Right</Button>
         </ButtonGroup>
       </Stack>
-
       <Stack direction="row">
         <ButtonGroup
           variant="text"
@@ -157,7 +151,6 @@ export const MuiButton = () => {
           <Button onClick={() => alert("right clicked")}>Right</Button>
         </ButtonGroup>
       </Stack>
-
       <Stack direction="row">
         <ToggleButtonGroup
           aria-label="text formatting"
@@ -179,6 +172,6 @@ export const MuiButton = () => {
           </ToggleButton>
         </ToggleButtonGroup>
       </Stack>
-    </Stack>
+    </Stack>)
   );
 };

@@ -2,7 +2,9 @@ import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } fr
 
 export const MuiCard = () => {
     return (
-        <Box width='300px'>
+        (<Box sx={{
+            width: '300px'
+        }}>
             <Card>
                 <CardMedia
                     component='img'
@@ -14,7 +16,9 @@ export const MuiCard = () => {
                     <Typography gutterBottom variant="h5" component='div'>
                         React
                     </Typography>
-                    <Typography variant='body2' color='text.secondary'>
+                    <Typography variant='body2' sx={{
+                        color: 'text.secondary'
+                    }}>
                         React is a javasciprt library asdf ....
                     </Typography>
                 </CardContent>
@@ -23,6 +27,6 @@ export const MuiCard = () => {
                     <Button size='small'>Learn more</Button>
                 </CardActions>
             </Card>
-        </Box>
+        </Box>)
     );
 };
